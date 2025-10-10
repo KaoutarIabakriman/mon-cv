@@ -7,25 +7,44 @@
     <meta name="description" content="A propos de moi">
     <meta name="keywords" content="web,developer,resume"/>
     <meta name="author" content="Lara Moussaoui">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/resp.css">
     <link rel="stylesheet" href="css/resume.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.4.0/css/all.min.css" integrity="sha512-pd7fZb9iY6+n1Aq3t9Vg+u93F1WgD5Oi3/mS3n0+1HgkLojvKj1kXrN6cBxy+Y4QF0WmvJDf3Vb6K4jX8Yf4Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-<body>
-<div id="wrapper">
-    <header>
-        <div class="header-text">
-            <h1>Lara Moussaoui</h1>
-            <h2>Ingénieur DevOps</h2>
-            <div class="info-item"><i class="fa fa-calendar"></i> 22 mars 2000</div>
-            <div class="info-item"><i class="fa fa-envelope"></i> Lara.moussaoui@gmail.com</div>
-            <div class="info-item"><i class="fa fa-map-marker"></i> Rue Jean Matthieu, Lyon, France</div>
-        </div>
-        <div class="header-image">
-            <img src="images/me.jpg" alt="Profil">
-        </div>
-    </header>
+<body itemscope itemtype="http://schema.org/Person">
+  <div id="wrapper">
+<header itemscope itemtype="http://schema.org/Person">
+    <div class="header-text">
+        <h1 itemprop="name">Lara Moussaoui</h1>
+        <h2 itemprop="jobTitle">Ingénieur DevOps</h2>
+        
+        <div class="info-item" itemprop="birthDate" content="2000-03-22">
+    <i class="fa-solid fa-calendar"></i> 22 mars 2000
+</div>
 
+<div class="info-item">
+    <i class="fa-solid fa-envelope"></i> 
+    <span itemprop="email">Lara.moussaoui@gmail.com</span>
+</div>
+
+<div class="info-item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <i class="fa-solid fa-map-marker"></i> 
+    <span itemprop="streetAddress">Rue Jean Matthieu</span>, 
+    <span itemprop="addressLocality">Lyon</span>, 
+    <span itemprop="addressCountry">France</span>
+</div>
+        <div class="info-item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <i class="fa fa-map-marker"></i> 
+            <span itemprop="streetAddress">Rue Jean Matthieu</span>, 
+            <span itemprop="addressLocality">Lyon</span>, 
+            <span itemprop="addressCountry">France</span>
+        </div>
+    </div>
+    
+    <div class="header-image">
+        <img src="images/me.jpg" alt="Profil" itemprop="image">
+    </div>
+</header>
     <main>
         <section class="experiences">
             <h2>Expériences professionnelles</h2>
@@ -125,17 +144,17 @@
         </section>
     </main>
 
-    <footer>
-        <hr>
-        <p><strong>À propos de cette page :</strong> Ce CV présente mon parcours, mes expériences.</p>
-        <p><strong>Me contacter :</strong></p>
-        <ul>
-            <li><i class="fa fa-envelope"></i><a href="mailto:lara.moussaoui@gmail.com"> lara.moussaoui@gmail.com</a></li>
-            <li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/lara-moussaoui" target="_blank"> linkedin.com/in/lara-moussaoui</a></li>
-            <li><i class="fa fa-github"></i><a href="https://github.com/laramoussaoui" target="_blank"> github.com/laramoussaoui</a></li>
-            <li><i class="fa fa-globe"></i><a href="https://lara-portfolio.com" target="_blank"> lara-portfolio.com</a></li>
-        </ul>
-    </footer>
+<footer>
+    <hr>
+    <p><strong>À propos de cette page :</strong> Ce CV présente mon parcours, mes expériences.</p>
+    <p><strong>Me contacter :</strong></p>
+    <ul>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:lara.moussaoui@gmail.com"> lara.moussaoui@gmail.com</a></li>
+        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/lara-moussaoui" target="_blank"> linkedin.com/in/lara-moussaoui</a></li>
+        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/laramoussaoui" target="_blank"> github.com/laramoussaoui</a></li>
+        <li><i class="fa-solid fa-globe"></i> <a href="https://lara-portfolio.com" target="_blank"> lara-portfolio.com</a></li>
+    </ul>
+</footer>
 </div>
 </body>
 </html>
