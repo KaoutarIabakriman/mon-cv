@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+             <meta charset="utf-8">
+             <meta http-equiv="X-UA-Compatible"content="IDE=edge,chrome=1">
+             <title>Mon CV</title>
+             <meta name=description"content="A propos de moi">
+             <meta name="keywords"content="web,developer,resume"/>
+             <meta name="author"content="width=device-width,initial-scale=1">
+        </head><body>
+               <header>
+                  <h1>Lara Moussaoui</h1>
+                  <h2>Loisir</h2>
+                  <img src="me.jpg" alt="Profil">
+                  <p>
+               </header>
+               <div id="wrapper"></div>
+        </body>
+</html>

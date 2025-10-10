@@ -1,0 +1,68 @@
+html, button, input, select, textarea {
+    color:#444;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    color:#777;
+
+}
+
+#id {
+    max-width: 900px;
+    min-width: 320px;
+    text-align: center;
+    margin: auto;
+}
+
+ header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-text {
+    max-width: 60%;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-text h2 {
+    margin: 5px 0 15px 0;
+    font-weight: normal;
+    color: #555;
+}
+
+.header-text p {
+    margin: 3px 0;
+    color: #777;
+}
+
+.header-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
