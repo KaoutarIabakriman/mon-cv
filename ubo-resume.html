@@ -1,148 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
-        <head>
-             <meta charset="utf-8">
-             <meta http-equiv="X-UA-Compatible"content="IDE=edge,chrome=1">
-             <title>Mon CV</title>
-             <meta name="description"content="A propos de moi">
-             <meta name="keywords"content="web,developer,resume"/>
-             <meta name="author"content="width=device-width,initial-scale=1">
-             <link rel="stylesheet" href="css/resume.css">
-             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mon CV</title>
+    <meta name="description" content="A propos de moi">
+    <meta name="keywords" content="web,developer,resume"/>
+    <meta name="author" content="Lara Moussaoui">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
 <body>
+<div id="wrapper">
     <header>
-    <div class="header-text">
-        <h1>Lara Moussaoui</h1>
-        <h2>Ingénieur Devops</h2>
-        <p><strong>Date naissance</strong>: 22 mars 2000</p>
-        <p><strong>Email</strong>: lara.moussaoui@gmail.com</p>
-        <p><strong>Adresse</strong>: Rue Jean Matthieu, Lyon, France</p>
-    </div>
-    <div class="header-image">
-        <img src="me.jpg" alt="Profil">
-    </div>
-</header>
-<i class="fa fa-camera-retro"></i>
-
-<section >
-  <h2>Expériences professionnelles</h2>
-
-  <article >
-    <header >
-      <div>
-        <h3>Stagiaire en Devops</h3>
-        <p>Capgemini engineering — Brest</p>
-      </div>
-      <time>Juin 2025 — Présent</time>
+        <div class="header-text">
+            <h1>Lara Moussaoui</h1>
+            <h2>Ingénieur DevOps</h2>
+            <div class="info-item"><i class="fa fa-calendar"></i> 22 mars 2000</div>
+            <div class="info-item"><i class="fa fa-envelope"></i> Lara.moussaoui@gmail.com</div>
+            <div class="info-item"><i class="fa fa-map-marker"></i> Rue Jean Matthieu, Lyon, France</div>
+        </div>
+        <div class="header-image">
+            <img src="images/me.jpg" alt="Profil">
+        </div>
     </header>
 
-    <div>
-      <p><strong>Responsabilités :</strong> Pilotage du projet, coordination des équipes (dev & QA), rédaction des spécifications fonctionnelles, suivi budgétaire.</p>
-    </div>
+    <main>
+        <section class="experiences">
+            <h2>Expériences professionnelles</h2>
 
-  </article>
+            <article>
+                <header>
+                    <h3>Stagiaire en DevOps</h3>
+                    <div class="company-item">
+                        <img src="images/Capgemini_Logo.svg" alt="capgemini_logo">
+                        Capgemini Engineering — Brest, France
+                    </div>
+                    <time>Juin 2025 — Présent</time>
+                </header>
+                <ul>
+                    <li>Mise en place et automatisation des pipelines CI/CD avec Jenkins et GitLab.</li>
+                    <li>Déploiement et gestion des environnements Docker et Kubernetes.</li>
+                    <li>Surveillance des performances et des logs des applications en production.</li>
+                    <li>Collaboration avec les équipes développement et QA pour améliorer la qualité des livrables.</li>
+                    <li>Rédaction de documentation technique pour les processus DevOps.</li>
+                    <li>Participation à la définition de l’architecture cloud et à l’intégration de Terraform.</li>
+                </ul>
+            </article>
 
-  <article>
-    <header >
-      <div>
-        <h3>Stagiaire en Développement Web</h3>
-        <p>Atos - Lille</p>
-      </div>
-      <time>Juin 2024 — Septembre 2024</time>
-    </header>
+            <article>
+                <header>
+                    <h3>Stagiaire en Développement Web</h3>
+                    <div class="company-item">
+                        <img src="images/atos.png" alt="atos_logo">
+                        Atos — Grenoble, France
+                    </div>
+                    <time>Juin 2024 — Septembre 2024</time>
+                </header>
+                <ul>
+                    <li>Développement et intégration de fonctionnalités frontend avec HTML, CSS, JavaScript, Bootstrap et Tailwind.</li>
+                    <li>Création et connexion des API backend avec Laravel.</li>
+                    <li>Maintenance et amélioration de l’interface utilisateur pour plus d’ergonomie.</li>
+                    <li>Gestion de version avec Git et participation aux revues de code.</li>
+                    <li>Rédaction de tests unitaires et débogage des fonctionnalités.</li>
+                    <li>Participation aux réunions Agile/Scrum et aux suivis de sprint.</li>
+                </ul>
+            </article>
+        </section>
 
-    <div >
-      <p><strong>Responsabilités :</strong> Développement frontend (Bootstrap, Tailwind), intégration backend (Laravel), gestion de versions Git.</p>
-    </div>
+        <section class="skills">
+            <h2>Compétences Techniques</h2>
+            <dl>
+                <dt><strong>Langages</strong></dt>
+                <dd>HTML, CSS, JavaScript, PHP, Java, Python</dd>
 
-  </article>
+                <dt><strong>Frameworks</strong></dt>
+                <dd>Laravel, Spring Boot, React, Tailwind CSS, Django</dd>
 
+                <dt><strong>Outils & Plateformes</strong></dt>
+                <dd>Git, Docker, Jenkins, CI/CD, GitLab, Kubernetes, Terraform</dd>
 
-</section>
-<section>
-    <section>
-  <h2 >Compétences Techniques</h2>
+                <dt><strong>Bases de données</strong></dt>
+                <dd>MySQL, MongoDB, Oracle, PL/SQL</dd>
+            </dl>
+        </section>
 
-  <dl>
-    <dt>Langages</dt>
-    <dd>HTML, CSS, JavaScript, PHP, Java, Python</dd>
+        <section class="education">
+            <h2>Formation</h2>
+            <article>
+                <h3>Master 2 — Ingénierie Informatique</h3>
+                <p>Université de Bretagne Occidentale (France)</p>
+                <p>2024 — 2025</p>
+            </article>
+            <article>
+                <h3>Cycle Ingénieur en Informatique</h3>
+                <p>EMSI - Maroc</p>
+                <p>2022 — 2024</p>
+                <p>Projets en génie logiciel, développement web.</p>
+            </article>
+            <article>
+                <h3>Cycle préparatoire</h3>
+                <p>Classes préparatoires aux grandes écoles(CPGE) - Maroc</p>
+                <p>2020 — 2022</p>
+            </article>
+        </section>
 
-    <dt>Frameworks</dt>
-    <dd>Laravel, Spring Boot, React, Tailwind CSS, Django</dd>
+        <section class="languages">
+            <h2>Langues</h2>
+            <dl>
+                <dt><strong>Français</strong></dt>
+                <dd>DALF C1</dd>
+                <dt><strong>Anglais</strong></dt>
+                <dd>TOEFL</dd>
+            </dl>
+        </section>
 
-    <dt>Outils & Plateformes</dt>
-    <dd>Git, Docker, Jenkins, CI/CD, Gitlab, Kubernetes, Terraform</dd>
+        <section class="activities">
+            <h2>Activités Parascolaires</h2>
+            <ul>
+                <li>Présidente du club responsable de la filière génie informatique à EMSI (2022-2023)</li>
+                <li>Responsable RH du club ENACTUS à CPGE(2021-2022)</li>
+            </ul>
+        </section>
+    </main>
 
-    <dt>Bases de données</dt>
-    <dd>MySQL, MongoDB, Oracle, PL/SQL</dd>
-
-  </dl>
-
-
-
-</section>
-<section id="formation">
-  <h2>Formation</h2>
-
-  <article>
-    <h3>Master 2 — Ingénierie Informatique</h3>
-    <p>Université de Bretagne Occidentale (France)</p>
-    <p>2024 — 2025</p>
-  </article>
-
-  <article>
-    <h3>Cycle Ingénieur en Informatique</h3>
-    <p>Ecole Marocaine Des Sciences(EMSI) - Maroc</p>
-    <p>2022 — 2024</p>
-    <p>Projets en génie logiciel, développement web et intelligence artificielle.</p>
-  </article>
-
-  <article>
-    <h3>Clycle préparatoire</h3>
-    <p>Classes préparatoires aux grandes écoles - Maroc</p>
-    <p>2020 — 2022</p>
-  </article>
-</section>
-
-<section>
-  <h2>Langues</h2>
-
-  <dl>
-    <dt>Français</dt>
-    <dd>DALF C1</dd>
-
-    <dt>Anglais</dt>
-    <dd>TOEFL</dd>
-  </dl>
-</section>
-
-<section>
-  <h2>CActivités Parascolaires</h2>
-
-  <ul>
-    <li>Présidente du club responsable de la filière génie informatique à EMSI en 2022-2023</li>
-    <li>Responsable RH du club ENACTUS</li>
-  </ul>
-</section>
-
-<footer>
-  <hr>
-
-  <p><strong>À propos de cette page :</strong></p>
-    Ce cv présente mon parcours, mes expériences.
-  </p>
-
-  <p><strong>Me contacter :</strong></p>
-  <ul>
-    <li>Email : <a href="mailto:lara.moussaoui@gmail.com">lara.moussaoui@gmail.com/a></li>
-    <li>LinkedIn : <a href="https://www.linkedin.com/in/lara-moussaoui" target="_blank">linkedin.com/in/kaoutar-iabakriman</a></li>
-    <li>GitHub : <a href="https://github.com/laramoussaoui" target="_blank">github.com/kaoutariabakriman</a></li>
-    <li>Portfolio : <a href="https://lara-portfolio.com" target="_blank">kaoutar-portfolio.example.com</a></li>
-  </ul>
-
-</footer>
-
-               <div id="wrapper"></div>
-        </body>
+    <footer>
+        <hr>
+        <p><strong>À propos de cette page :</strong> Ce CV présente mon parcours, mes expériences.</p>
+        <p><strong>Me contacter :</strong></p>
+        <ul>
+            <li><i class="fa fa-envelope"></i><a href="mailto:lara.moussaoui@gmail.com"> lara.moussaoui@gmail.com</a></li>
+            <li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/lara-moussaoui" target="_blank"> linkedin.com/in/lara-moussaoui</a></li>
+            <li><i class="fa fa-github"></i><a href="https://github.com/laramoussaoui" target="_blank"> github.com/laramoussaoui</a></li>
+            <li><i class="fa fa-globe"></i><a href="https://lara-portfolio.com" target="_blank"> lara-portfolio.com</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
 </html>
