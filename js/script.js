@@ -33,3 +33,21 @@ document.querySelectorAll('.details-btn').forEach(function(btn) {
         animate();
     });
 });
+
+document.querySelectorAll('.skill-item').forEach(function(item) {
+    item.addEventListener('mouseenter', function(e) {
+        let tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.textContent = item.getAttribute('data-tooltip');
+        document.body.appendChild(tooltip);
+
+        let rect = item.getBoundingClientRect();
+        tooltip.style.left = rect.left + window.scrollX + 'px';
+        tooltip.style.top = rect.bottom + window.scrollY + 5 + 'px';
+    });
+
+    item.addEventListener('mouseleave', function() {
+        let tooltip = document.querySelector('.tooltip');
+        if (tooltip) tooltip.remove();
+    });
+});
