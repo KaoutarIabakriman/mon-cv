@@ -57,14 +57,21 @@
             margin: 3px 0;
         }
 
-        .header-image img {
-            width: 200px;
-            height: 200px;
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 6px var(--shadow-color);
-            object-fit: cover;
-        }
+       .header-image {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: flex-end; /* place l’image à droite */
+    align-items: center;
+}
+
+.header-image img {
+    width: 160px;      /* taille moyenne */
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px var(--shadow-color);
+}
 
         section {
             margin-bottom: 30px;

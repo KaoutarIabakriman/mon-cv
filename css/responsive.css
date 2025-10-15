@@ -1,6 +1,5 @@
 @media only screen and (max-width: 740px) {
     #wrapper {
-        background: #f77;  
         width: 100%;        
     }
 
@@ -14,7 +13,6 @@
 
 @media only screen and (max-width: 570px) {
     #wrapper {
-        background: #7f7;
         width: 100%;
     }
 
@@ -23,7 +21,6 @@
 
 @media only screen and (max-width: 480px) {
     #wrapper {
-        background: #77f;
         width: 100%;
     }
 
