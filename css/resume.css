@@ -178,3 +178,26 @@
     transition: opacity 0.2s;
     opacity: 0.95;
 }
+
+.skills-category {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+.skills-list {
+    min-width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.skills-list li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.skill-item i {
+    margin-left: 2px;
+}

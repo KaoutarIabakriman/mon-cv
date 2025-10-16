@@ -11,7 +11,7 @@
     <meta name="author" content="Lara Moussaoui">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/resume.css">
-    <script type="text/javascript" src="js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
 
 
 <link
@@ -162,49 +162,58 @@
         </ul>
     </article>
 </section>
-
-       <section class="skills">
+<section class="skills">
     <h2>Compétences Techniques</h2>
-    <dl>
-        <dt><strong>Langages</strong></dt>
-        <dd>
-            <span class="skill-item" data-tooltip="Langage de structuration de pages web.">HTML</span>,
-            <span class="skill-item" data-tooltip="Langage de mise en forme et de design web.">CSS</span>,
-            <span class="skill-item" data-tooltip="Langage de programmation pour l’interactivité web.">JavaScript</span>,
-            <span class="skill-item" data-tooltip="Langage de script côté serveur, très utilisé pour le web.">PHP</span>,
-            <span class="skill-item" data-tooltip="Langage orienté objet, utilisé pour les applications robustes.">Java</span>,
-            <span class="skill-item" data-tooltip="Langage polyvalent pour le scripting, la data science, etc.">Python</span>
-        </dd>
 
-        <dt><strong>Frameworks</strong></dt>
-        <dd>
-            <span class="skill-item" data-tooltip="Framework PHP pour le développement web rapide.">Laravel</span>,
-            <span class="skill-item" data-tooltip="Framework Java pour créer des applications web robustes.">Spring Boot</span>,
-            <span class="skill-item" data-tooltip="Bibliothèque JavaScript pour construire des interfaces utilisateur.">React</span>,
-            <span class="skill-item" data-tooltip="Framework CSS utilitaire pour un design rapide et responsive.">Tailwind CSS</span>,
-            <span class="skill-item" data-tooltip="Framework Python pour le développement web rapide.">Django</span>
-        </dd>
+    <h3>Langages</h3>
+    <div class="skills-category">
+        <ul class="skills-list">
+            <li><span class="skill-item" data-tooltip="Langage de structuration de pages web.">HTML</span></li>
+            <li><span class="skill-item" data-tooltip="Langage de mise en forme et de design web.">CSS</span></li>
+            <li><span class="skill-item" data-tooltip="Langage de programmation pour l’interactivité web.">JavaScript</span></li>
+            <li><span class="skill-item" data-tooltip="Langage de script côté serveur, très utilisé pour le web.">PHP</span></li>
+            <li><span class="skill-item" data-tooltip="Langage orienté objet, utilisé pour les applications robustes.">Java</span></li>
+            <li><span class="skill-item" data-tooltip="Langage polyvalent pour le scripting, la data science, etc.">Python</span></li>
+        </ul>
+        <canvas id="canvas-langages" height="220"></canvas>
+    </div>
 
-        <dt><strong>Outils & Plateformes</strong></dt>
-        <dd>
-            <span class="skill-item" data-tooltip="Gestion de versions de code source.">Git</span>,
-            <span class="skill-item" data-tooltip="Conteneurisation d’applications.">Docker</span>,
-            <span class="skill-item" data-tooltip="Automatisation de pipelines CI/CD.">Jenkins</span>,
-            <span class="skill-item" data-tooltip="Plateforme DevOps pour l’intégration continue.">GitLab</span>,
-            <span class="skill-item" data-tooltip="Orchestration de conteneurs à grande échelle.">Kubernetes</span>,
-            <span class="skill-item" data-tooltip="Infrastructure as Code pour le cloud.">Terraform</span>
-        </dd>
+    <h3>Frameworks</h3>
+    <div class="skills-category">
+        <ul class="skills-list">
+            <li><span class="skill-item" data-tooltip="Framework PHP pour le développement web rapide.">Laravel</span></li>
+            <li><span class="skill-item" data-tooltip="Framework Java pour créer des applications web robustes.">Spring Boot</span></li>
+            <li><span class="skill-item" data-tooltip="Bibliothèque JavaScript pour construire des interfaces utilisateur.">React</span></li>
+            <li><span class="skill-item" data-tooltip="Framework CSS utilitaire pour un design rapide et responsive.">Tailwind CSS</span></li>
+            <li><span class="skill-item" data-tooltip="Framework Python pour le développement web rapide.">Django</span></li>
+        </ul>
+        <canvas id="canvas-frameworks" height="220"></canvas>
+    </div>
 
-        <dt><strong>Bases de données</strong></dt>
-        <dd>
-            <span class="skill-item" data-tooltip="Système de gestion de base de données relationnelle.">MySQL</span>,
-            <span class="skill-item" data-tooltip="Base de données NoSQL orientée documents.">MongoDB</span>,
-            <span class="skill-item" data-tooltip="Système de gestion de base de données relationnelle d’Oracle.">Oracle</span>,
-            <span class="skill-item" data-tooltip="Langage procédural pour Oracle Database.">PL/SQL</span>
-        </dd>
-    </dl>
+    <h3>Outils & Plateformes</h3>
+    <div class="skills-category">
+        <ul class="skills-list">
+            <li><span class="skill-item" data-tooltip="Gestion de versions de code source.">Git</span></li>
+            <li><span class="skill-item" data-tooltip="Conteneurisation d’applications.">Docker</span></li>
+            <li><span class="skill-item" data-tooltip="Automatisation de pipelines CI/CD.">Jenkins</span></li>
+            <li><span class="skill-item" data-tooltip="Plateforme DevOps pour l’intégration continue.">GitLab</span></li>
+            <li><span class="skill-item" data-tooltip="Orchestration de conteneurs à grande échelle.">Kubernetes</span></li>
+            <li><span class="skill-item" data-tooltip="Infrastructure as Code pour le cloud.">Terraform</span></li>
+        </ul>
+        <canvas id="canvas-outils" height="220"></canvas>
+    </div>
+
+    <h3>Bases de données</h3>
+    <div class="skills-category">
+        <ul class="skills-list">
+            <li><span class="skill-item" data-tooltip="Système de gestion de base de données relationnelle.">MySQL</span></li>
+            <li><span class="skill-item" data-tooltip="Base de données NoSQL orientée documents.">MongoDB</span></li>
+            <li><span class="skill-item" data-tooltip="Système de gestion de base de données relationnelle d’Oracle.">Oracle</span></li>
+            <li><span class="skill-item" data-tooltip="Langage procédural pour Oracle Database.">PL/SQL</span></li>
+        </ul>
+        <canvas id="canvas-bd" height="220"></canvas>
+    </div>
 </section>
-
         <section class="education">
             <h2>Formation</h2>
             <article>
