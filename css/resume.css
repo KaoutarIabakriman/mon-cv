@@ -95,25 +95,45 @@ header {
     transform: scale(1.05) rotate(-2deg);
 }
 
-section {
-    margin-bottom: 36px;
-    background: var(--bg-section);
-    border-radius: 8px;
-    padding: 24px 20px 10px 20px;
-    box-shadow: 0 1px 4px var(--shadow-color);
-}
-
 section h2 {
     border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 7px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;    
     color: var(--primary-color);
-    font-size: 1.4em;
+    font-size: 1.3mem;
     letter-spacing: 0.5px;
 }
 
+section.experiences {
+    padding-top: 6px;
+    padding-bottom: 2px;
+    margin-bottom: 18px;
+}
+
+section.experiences h2 {
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    font-size: 1.15em;
+}
 article {
     margin-bottom: 18px;
+}
+
+article > header {
+    padding: 12px 18px 8px 18px; /* réduit le padding interne */
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 12px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    min-height: unset; /* retire la hauteur minimale si présente */
+}
+
+article > header h3 {
+    margin: 0;
+    font-size: 1.08em;
 }
 
 article header h3 {
