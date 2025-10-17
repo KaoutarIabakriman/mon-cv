@@ -1,0 +1,32 @@
+{
+  "Langages": [
+    { "nom": "HTML", "niveau": 5 },
+    { "nom": "CSS", "niveau": 5 },
+    { "nom": "JavaScript", "niveau": 4 },
+    { "nom": "PHP", "niveau": 4 },
+    { "nom": "Java", "niveau": 4 },
+    { "nom": "Python", "niveau": 4 }
+  ],
+  "Frameworks": [
+    { "nom": "Laravel", "niveau": 4 },
+    { "nom": "Spring Boot", "niveau": 4 },
+    { "nom": "React", "niveau": 4 },
+    { "nom": "Tailwind CSS", "niveau": 5 },
+    { "nom": "Django", "niveau": 4 }
+  ],
+  "Outils et Plateformes": [
+    { "nom": "Git", "niveau": 5 },
+    { "nom": "Docker", "niveau": 4 },
+    { "nom": "Jenkins", "niveau": 4 },
+    { "nom": "GitLab", "niveau": 4 },
+    { "nom": "Kubernetes", "niveau": 3 },
+    { "nom": "Terraform", "niveau": 3 }
+  ],
+  "Bases de données": [
+    { "nom": "MySQL", "niveau": 5 },
+    { "nom": "MongoDB", "niveau": 4 },
+    { "nom": "Oracle", "niveau": 4 },
+    { "nom": "PL/SQL", "niveau": 4 }
+  ]
+}
+

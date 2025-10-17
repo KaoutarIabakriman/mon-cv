@@ -35,19 +35,118 @@ document.querySelectorAll('.details-btn').forEach(function(btn) {
 });
 
 document.querySelectorAll('.skill-item').forEach(function(item) {
+    let tooltip = null;
     item.addEventListener('mouseenter', function(e) {
-        let tooltip = document.createElement('div');
+        tooltip = document.createElement('div');
         tooltip.className = 'tooltip';
         tooltip.textContent = item.getAttribute('data-tooltip');
         document.body.appendChild(tooltip);
+        tooltip.style.position = 'absolute';
+        tooltip.style.pointerEvents = 'none';
+    });
 
-        let rect = item.getBoundingClientRect();
-        tooltip.style.left = rect.left + window.scrollX + 'px';
-        tooltip.style.top = rect.bottom + window.scrollY + 5 + 'px';
+    item.addEventListener('mousemove', function(e) {
+        if (tooltip) {
+            tooltip.style.left = (e.pageX + 10) + 'px';
+            tooltip.style.top = (e.pageY + 15) + 'px';
+        }
     });
 
     item.addEventListener('mouseleave', function() {
-        let tooltip = document.querySelector('.tooltip');
-        if (tooltip) tooltip.remove();
+        if (tooltip) {
+            tooltip.remove();
+            tooltip = null;
+        }
     });
+});
+
+let competencesCategories = {};
+
+function afficherEtoiles(niveau) {
+    let etoiles = '';
+    for (let i = 1; i <= 5; i++) {
+        etoiles += i <= niveau
+            ? '<i class="fa-solid fa-star" style="color:gold"></i>'
+            : '<i class="fa-regular fa-star" style="color:gold"></i>';
+    }
+    return etoiles;
+}
+
+function ajouterEtoilesAuxCompetences() {
+    const toutesCompetences = [].concat(
+        competencesCategories["Langages"] || [],
+        competencesCategories["Frameworks"] || [],
+        competencesCategories["Outils et Plateformes"] || [],
+        competencesCategories["Bases de données"] || []
+    );
+    document.querySelectorAll('.skill-item').forEach(function(span) {
+        const nom = span.textContent.trim();
+        const competence = toutesCompetences.find(c => c.nom === nom);
+        if (competence) {
+            span.innerHTML = `${nom} ${afficherEtoiles(competence.niveau)}`;
+        }
+    });
+}
+
+function afficherHistogrammeCategorie(canvasId, competences) {
+    const barHeight = 25;    
+    const spacing = 20;     
+    const leftMargin = 120;
+    const rightMargin = 40; 
+    const topMargin = 20;
+    const maxNiveau = 5;
+
+    const totalHeight = topMargin + competences.length * (barHeight + spacing);
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+
+  
+    const canvasWidth = 500;
+    canvas.width = canvasWidth;
+    canvas.height = totalHeight + 40; 
+
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+    ctx.strokeStyle = "#eee";
+    ctx.fillStyle = "#444";
+    ctx.font = "12px Arial";
+    ctx.textAlign = "center";
+    for (let n = 1; n <= maxNiveau; n++) {
+        const x = leftMargin + (n / maxNiveau) * (canvasWidth - leftMargin - rightMargin);
+        ctx.beginPath();
+        ctx.moveTo(x, topMargin);
+        ctx.lineTo(x, canvas.height - 20);
+        ctx.stroke();
+        ctx.fillText(n, x, 15);
+    }
+
+
+    competences.forEach((c, i) => {
+        const y = topMargin + i * (barHeight + spacing);
+        const barWidth = (c.niveau / maxNiveau) * (canvasWidth - leftMargin - rightMargin);
+
+        ctx.fillStyle = "#3498db";
+        ctx.fillRect(leftMargin, y, barWidth, barHeight);
+
+        ctx.fillStyle = "#333";
+        ctx.textAlign = "right";
+        ctx.font = "13px Arial";
+        ctx.fillText(c.nom, leftMargin - 10, y + barHeight * 0.75);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('competences.json')
+        .then(response => response.json())
+        .then(data => {
+            competencesCategories = data;
+            ajouterEtoilesAuxCompetences();
+            afficherHistogrammeCategorie('canvas-langages', competencesCategories["Langages"] || []);
+            afficherHistogrammeCategorie('canvas-frameworks', competencesCategories["Frameworks"] || []);
+            afficherHistogrammeCategorie('canvas-outils', competencesCategories["Outils et Plateformes"] || []);
+            afficherHistogrammeCategorie('canvas-bd', competencesCategories["Bases de données"] || []);
+        })
+        .catch(err => console.error('Erreur de chargement du fichier JSON', err));
 });
