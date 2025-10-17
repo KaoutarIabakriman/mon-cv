@@ -88,7 +88,7 @@ function ajouterEtoilesAuxCompetences() {
     });
 }
 
-comment valider function afficherHistogrammeCategorie(canvasId, competences) {
+function afficherHistogrammeCategorie(canvasId, competences) {
     const barHeight = 25;    // hauteur d'une barre
     const spacing = 20;      // espace entre les barres
     const leftMargin = 120;  // espace pour afficher le nom des compétences
@@ -138,6 +138,7 @@ comment valider function afficherHistogrammeCategorie(canvasId, competences) {
         ctx.fillText(c.nom, leftMargin - 10, y + barHeight * 0.75);
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('competences.json')
