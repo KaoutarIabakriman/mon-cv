@@ -31,7 +31,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    align-items: center; /* centre verticalement */
+    align-items: center;
     gap: 32px;
     flex-wrap: nowrap;
     padding: 28px 24px;
@@ -49,7 +49,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 160px; /* même hauteur que la photo */
+    height: 160px; 
+    
 }
 .header-image {
     flex: 0 0 160px;
@@ -119,7 +120,7 @@ article {
 }
 
 article > header {
-    padding: 12px 18px 8px 18px; /* réduit le padding interne */
+    padding: 12px 18px 8px 18px; 
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 2px 12px var(--shadow-color);
@@ -128,7 +129,7 @@ article > header {
     flex-wrap: wrap;
     align-items: center;
     gap: 12px;
-    min-height: unset; /* retire la hauteur minimale si présente */
+    min-height: unset; 
 }
 
 article > header h3 {
