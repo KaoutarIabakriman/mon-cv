@@ -88,11 +88,11 @@ function ajouterEtoilesAuxCompetences() {
     });
 }
 
-function afficherHistogrammeCategorie(canvasId, competences) {
-    const barHeight = 25;    
-    const spacing = 20;     
-    const leftMargin = 120;  
-    const rightMargin = 40;  
+comment valider function afficherHistogrammeCategorie(canvasId, competences) {
+    const barHeight = 25;    // hauteur d'une barre
+    const spacing = 20;      // espace entre les barres
+    const leftMargin = 120;  // espace pour afficher le nom des compétences
+    const rightMargin = 40;  // espace à droite
     const topMargin = 20;
     const maxNiveau = 5;
 
@@ -100,13 +100,15 @@ function afficherHistogrammeCategorie(canvasId, competences) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
 
+    // Largeur fixe (tu peux ajuster selon ton CV)
     const canvasWidth = 500;
     canvas.width = canvasWidth;
-    canvas.height = totalHeight + 40; 
+    canvas.height = totalHeight + 40; // un peu d'espace en bas
+
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-   
+    // Graduation (1 à 5)
     ctx.strokeStyle = "#eee";
     ctx.fillStyle = "#444";
     ctx.font = "12px Arial";
@@ -120,16 +122,16 @@ function afficherHistogrammeCategorie(canvasId, competences) {
         ctx.fillText(n, x, 15);
     }
 
- 
+    // Barres horizontales
     competences.forEach((c, i) => {
         const y = topMargin + i * (barHeight + spacing);
         const barWidth = (c.niveau / maxNiveau) * (canvasWidth - leftMargin - rightMargin);
 
-
+        // Barre bleue
         ctx.fillStyle = "#3498db";
         ctx.fillRect(leftMargin, y, barWidth, barHeight);
 
-    
+        // Nom de la compétence
         ctx.fillStyle = "#333";
         ctx.textAlign = "right";
         ctx.font = "13px Arial";
